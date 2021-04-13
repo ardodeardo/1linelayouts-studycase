@@ -1,0 +1,37 @@
+@import "../abstracts/variables";
+
+.c-mini-uikit {
+    background-color: $color-mini-white-purplish;
+
+
+    &__grid {
+        display: grid;
+        grid-template-columns: minmax(64px, 64px) 1fr;
+    }
+
+    &__burger {
+        background-color: var(--color-white);
+        aspect-ratio: 1/1;
+
+        span {
+            background-color: $color-mini-blue-purplish;
+            height: 2px;
+            width: 20px;
+        }
+    }
+
+    &__sidebar {
+        background-color: $color-mini-blue-purplish;
+    }
+
+    &__nav {
+
+        &-item {
+            aspect-ratio: 1/1;
+        }
+    }
+
+    &__icon {
+        font-size: 20px;
+    }
+}

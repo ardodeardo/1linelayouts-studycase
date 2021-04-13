@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block extra_style %}
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+{% endblock extra_style %}
+
+{% block content %}
+
+    <main class="t-app-cards">
+
+        {% include "./components/app-cards.html" %}
+
+        {% 
+            set copyright = {
+                url: "https://www.uidesigndaily.com/posts/sketch-app-cards-card-select-day-996",
+                author: "uidesigndaily.com"
+            } 
+        %}
+        {% include "./components/copyright.html" %}
+    </main>
+
+{% endblock content %}

@@ -1,0 +1,54 @@
+@import "../abstracts/variables";
+
+
+.h {
+    &-screen {
+        height: 100vh;
+    }
+}
+
+.min-h {
+    &-screen {
+        min-height: 100vh;
+    }
+}
+
+// generate width and height properties
+@each $sizer in $sizing {
+
+    @each $query in $queries {
+    
+        @each $property in $width-height {
+
+            @if $sizer == 'w' { $sizer-type : 'width' }
+            @else { $sizer-type : 'height' }
+
+            @if $query == '' {
+
+                .#{$sizer}-#{$property} {
+
+                    @if $property == full { $property: 100% }
+                    @if $property == half { $property: 50% }
+
+                    #{$sizer-type}: $property;
+                }
+
+            }
+            @else {
+
+                .#{$sizer}-#{$query}-#{$property} {
+    
+                    @include respond-to($query) {
+
+                        @if $property == full { $property: 100% }
+                        @if $property == half { $property: 50% }
+
+                        #{$sizer-type}: $property;
+                    }
+                }
+            }
+        }
+    }
+}
+
+

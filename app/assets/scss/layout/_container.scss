@@ -1,0 +1,26 @@
+// @import "../abstracts/variables";
+
+.container {
+
+    max-width: 100%;
+    padding: 0 1.25rem;
+
+    @include respond-to('md') {
+        max-width: $container-md;
+        padding: 0;
+    }
+
+    @include respond-to('lg') {
+        max-width: $container-lg;
+
+    }
+
+    @include respond-to('xl') {
+        max-width: $container-xl;
+
+    }
+
+    @include respond-to('xxl') {
+        max-width: $container-xxl;
+    }
+}

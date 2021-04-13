@@ -1,0 +1,19 @@
+@import "../abstracts/variables";
+@import "../objects/buttons";
+
+.t-upload {
+
+    font-family: 'Roboto', sans-serif;
+
+    .btn {
+        @extend %button;
+
+        background-color: $color-upload-purple;
+        color: var(--color-white);
+        border-radius: 16px;
+        font-size: 16px;
+        min-width: 150px;
+        font-weight: 700;
+    }
+
+}

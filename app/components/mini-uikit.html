@@ -1,0 +1,53 @@
+{% 
+    set items = [
+        {
+            icon: "image",
+            url: "javascript:void(0);"
+        },
+        {
+            icon: "email",
+            url: "javascript:void(0);"
+        },
+        {
+            icon: "package",
+            url: "javascript:void(0);"
+        },
+        {
+            icon: "layout",
+            url: "javascript:void(0);"
+        }
+    ]
+%}
+
+<section class="c-mini-uikit">
+
+    <div class="c-mini-uikit__grid min-h-screen w-full">
+
+        <div class="c-mini-uikit__sidebar">
+
+            <div class="c-mini-uikit__burger grid place-center">
+                <div class="flex flex-column items-center">
+                    <span class="block"></span>
+                    <span class="block my-1"></span>
+                    <span class="block"></span>
+                </div>
+            </div>
+
+            <ul class="c-mini-uikit__nav grid">
+
+                {% for item in items %}
+                <li class="c-mini-uikit__nav-item grid place-center">
+                    <a href="{{ item.url }}" class="text-white text-decoration-none">
+                        <span class="ti-{{ item.icon }} c-mini-uikit__icon text-bold"></span>
+                    </a>
+                </li>
+                {% endfor %}
+
+            </ul>
+
+        </div>
+        <div class="grid place-center">
+            <h1 class="heading-l">Dashboard Content</h1>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,116 @@
+// container
+$container-md: 688px;
+$container-lg: 864px;
+$container-xl: 1140px;
+$container-xxl: 1350px;
+
+
+// upload theme colors
+$color-upload-dark-purple: #100840;
+$color-upload-dark-purple2: #1C174D;
+$color-upload-purple: #644CF3;
+
+
+// recruitment theme colors
+$color-recruitment-blue-purplish: #3547A1;
+
+
+// app cards theme colors
+$colors-app-wall-white: #F7F8FC;
+$colors-app-light-gray: #F0F2FB;
+$colors-app-shade-gray: #D0D9F2;
+
+
+// colored cards theme colors
+$color-colored-dark-purple: #302542;
+$color-colored-blue-purplish: #8D7DFE;
+$color-colored-purple: #C77AFF;
+$color-colored-pink: #FF73BC;
+
+
+// mini uikit theme colors
+$color-mini-white-purplish: #F9FAFF;
+$color-mini-blue-purplish: #4D74E9;
+
+
+// media query
+$queries: ('','md','lg','xl');
+
+
+// spacing loop
+$spacer-type: '';
+$spacing: ('m', 'p');
+$positions: ('t', 'r', 'b', 'l', 'x', 'y');
+$multiplier: 4px;
+$threshold: 16;
+
+
+// sizing loop
+$sizer-type: '';
+$sizing: ('w', 'h');
+$width-height: (0, auto, inherit, full, half);
+
+
+// general properties variables
+
+/*
+list rules
+----------
+prefix: (
+    (midfix, postfix, property, value, isuseprefix)
+    ...
+)
+expected result
+---------------
+    .prefix-midfix-query-postfix {
+        property: value
+    }
+*/
+
+$texts: (
+    text: (
+        ('', 'medium', font-weight, 500, true),
+        ('', 'bold', font-weight, 700, true),
+        ('', 'center', text-align, center, true),
+        ('', 'left', text-align, left, true),
+        ('', 'right', text-align, right, true),
+        ('', 'black', color, var(--color-black), true),
+        ('', 'white', color, var(--color-white), true),
+        ('', 'blue', color, var(--color-blue), true),
+        ('', 'light-blue', color, var(--color-light-blue), true),
+        ('decoration', 'none', color, none, true),
+        ('decoration', 'underline', color, underline, true),
+    ),
+);
+
+$displays: (
+    state: (
+        ('', 'hidden', display, none, false),
+        ('', 'block', display, block, false),
+        ('', 'invisible', visibility, hidden, false)
+    ),
+    overflow: (
+        ('', 'visible', overflow, visible, true), // single item USE comma in order to behave as a list
+    ),
+    display: (
+        ('', 'grid', display, grid, false),
+        ('', 'flex', display, flex, false)
+    ),
+    place: (
+        ('', 'center', place-items, center, true),
+    ),
+    flex: (
+        ('', 'column', flex-direction, column, true),
+        ('', 'wrap', flex-wrap, wrap, true),
+        ('', 'nowrap', flex-wrap, nowrap, true),
+    ),
+    justify: (
+        ('', 'center', justify-content, center, true),
+        ('', 'between', justify-content, space-between, true),
+    ),
+    items: (
+        ('', 'start', align-items, flex-start, true),
+        ('', 'center', align-items, center, true),
+        ('', 'end', align-items, flex-end, true),
+    )
+);

@@ -1,0 +1,49 @@
+{% 
+    set items = [
+        {
+            title: "Super Centered",
+            url: "/super-centered.html"
+        },
+        {
+            title: "The Deconstructed Pancake",
+            url: "/deconstructed-pancake.html"
+        },
+        {
+            title: "Sidebar Says",
+            url: "/sidebar-says.html"
+        },
+        {
+            title: "RAM (Repeat, Auto, Minmax)",
+            url: "/ram.html"
+        },
+        {
+            title: "Clamping My Style",
+            url: "/clamping-my-style.html"
+        }
+    ]
+%}
+
+
+
+<section class="c-landing relative overflow-hidden grid place-center">
+
+    <div class="container mx-auto">
+
+        <div class="c-landing__content h-full text-center py-8">
+
+            <h1 class="c-landing__title heading-xl">1-Line Layouts <span>Study Case</span></h1>
+            <p class="description-m mt-2">Simple implementation of css hacks based on <a href="https://1linelayouts.glitch.me/" target="_blank" rel="noopener noreferrer" class="text-blue text-bold">1linelayouts</a></p>
+            
+            <div class="c-landing__item-container pt-8">
+                {% for item in items %}
+                    <a href="{{ item.url }}" class="c-landing__item relative">
+                        <p class="text-medium">{{ item.title }}</p>
+                    </a>
+                {% endfor %}
+            </div>
+            
+        </div>
+    
+    </div>
+</section>
+    

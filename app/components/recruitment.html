@@ -1,0 +1,50 @@
+{% 
+    set items = [
+        {
+            image: "jon",
+            title: "Front-end Dev"
+        },
+        {
+            image: "jean",
+            title: "Back-end Dev"
+        },
+        {
+            image: "jenni",
+            title: "UI Designer"
+        },
+        {
+            image: "jazebelle",
+            title: "UX Designer"
+        }
+    ]
+%}
+
+<section class="c-recruitment min-h-screen">
+    <div class="grid place-center w-full min-h-screen">
+        <div class="text-center py-8">
+            <div class="container w-md-half mx-auto">
+                <h1 class="heading-l">We're looking for <br>co-founder</h1>
+                <p class="mt-8">Boardme is a technology startup in the user onboarding and digital adoption space</p>
+                <p class="mt-8">We are members of StartupLab Bergen, and we're looking for passionate co-founders interested in joining our journey!</p>
+                <h2 class="heading-m mt-10">Available positions</h2>
+            </div>
+            
+            <div class="container mx-auto c-recruitment__item-container mt-10 flex flex-wrap flex-lg-nowrap justify-center this-is__the-deconstructed-pancake">
+                
+                {% for item in items %}
+                    <div class="c-recruitment__item px-8 py-4 mx-0 mx-4 mb-8 flex flex-column justify-end w-full w-md-auto">
+                        <img src="https://joeschmoe.io/api/v1/{{ item.image }}" alt="{{ item.image }}">
+                        <h2 class="mt-4">{{ item.title }}</h2>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="container mt-4">
+                <a href="javascript:void(0);">
+                    <button class="btn">Get in touch</button>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,55 @@
+{% 
+    set items = [
+        {
+            icon: "plus",
+            title: ""
+        },
+        {
+            icon: "facebook",
+            title: "Facebook"
+        },
+        {
+            icon: "twitter-alt",
+            title: "Twitter"
+        },
+        {
+            icon: "instagram",
+            title: "Instagram"
+        }
+    ]
+%}
+
+<section class="c-app-cards min-h-screen">
+    <div class="min-h-screen w-full grid place-center">
+        <div class="c-app-cards__container container mx-auto py-8">
+            <div class="w-auto mx-auto">
+
+                <div class="c-app-cards__app-control">
+                    <div class="grid items-center text-center text-md-left">
+                        <a href="javascript:void(0)" class="text-decoration-none text-black text-medium">
+                            Start New
+                        </a>
+                    </div>
+                    <div class="grid items-center text-center text-md-right">
+                        <a href="javascript:void(0)">
+                            <button class="btn btn-dark">Install All</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="c-app-cards__grid mt-8 this-is__repeat-auto-minmax ">
+                    {% for item in items %}
+                        <div class="c-app-cards__item grid place-center this-is__aspect-ratio">
+                            <div class="grid place-center">
+                                <span class="c-app-cards__icon ti-{{ item.icon }} {% if loop.index == 1 %}text-bold {% endif %}"></span>
+                                {% if loop.index != 1 %}
+                                    <h2 class="text-medium mt-4">{{ item.title }}</h2>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

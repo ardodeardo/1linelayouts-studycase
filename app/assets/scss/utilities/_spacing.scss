@@ -1,0 +1,145 @@
+@import "../abstracts/variables";
+
+.m {
+
+    &x-auto {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &y-auto {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    &-t-auto {
+        margin-top: auto;
+    }
+
+    &-r-auto {
+        margin-right: auto;
+    }
+
+    &-b-auto {
+        margin-bottom: auto;
+    }
+
+    &-l-auto {
+        margin-left: auto;
+    }
+
+}
+
+// loop all position margin and padding
+@each $spacer in $spacing {
+
+    @each $query in $queries {
+    
+        @for $i from 0 through $threshold {
+
+            @if $spacer == 'm' { $spacer-type : 'margin' }
+            @else { $spacer-type : 'padding' }
+
+            @if $query == '' {
+    
+                .#{$spacer}-#{$i} {
+                    #{$spacer-type}: $i * $multiplier;
+                }
+
+            }
+            @else {
+
+                .#{$spacer}-#{$query}-#{$i} {
+    
+                    @include respond-to($query) {
+                        #{$spacer-type}: $i * $multiplier;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+// loop margin and padding with positioning
+@each $spacer in $spacing {
+
+    @each $position in $positions {
+
+        @each $query in $queries {
+    
+            @for $i from 0 through $threshold {
+    
+                @if $spacer == 'm' { $spacer-type : 'margin' }
+                @else { $spacer-type : 'padding' }
+
+                @if $query == '' {
+    
+                    .#{$spacer}#{$position}-#{$i} {
+        
+                        @if $position == "t" {
+                            #{$spacer-type}-top: $i * $multiplier;
+                        }
+                        
+                        @if $position == "r" {
+                            #{$spacer-type}-right: $i * $multiplier;
+                        }
+            
+                        @if $position == "b" {
+                            #{$spacer-type}-bottom: $i * $multiplier;
+                        }
+            
+                        @if $position == "l" {
+                            #{$spacer-type}-left: $i * $multiplier;
+                        }
+
+                        @if $position == "x" {
+                            #{$spacer-type}-left: $i * $multiplier;
+                            #{$spacer-type}-right: $i * $multiplier;
+                        }
+
+                        @if $position == "y" {
+                            #{$spacer-type}-top: $i * $multiplier;
+                            #{$spacer-type}-bottom: $i * $multiplier;
+                        }
+                    }
+    
+                }
+                @else {
+    
+                    .#{$spacer}#{$position}-#{$query}-#{$i} {
+        
+                        @include respond-to($query) {
+    
+                            @if $position == "t" {
+                                #{$spacer-type}-top: $i * $multiplier;
+                            }
+                            
+                            @if $position == "r" {
+                                #{$spacer-type}-right: $i * $multiplier;
+                            }
+                
+                            @if $position == "b" {
+                                #{$spacer-type}-bottom: $i * $multiplier;
+                            }
+                
+                            @if $position == "l" {
+                                #{$spacer-type}-left: $i * $multiplier;
+                            }
+
+                            @if $position == "x" {
+                                #{$spacer-type}-left: $i * $multiplier;
+                                #{$spacer-type}-right: $i * $multiplier;
+                            }
+
+                            @if $position == "y" {
+                                #{$spacer-type}-top: $i * $multiplier;
+                                #{$spacer-type}-bottom: $i * $multiplier;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

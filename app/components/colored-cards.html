@@ -1,0 +1,52 @@
+{% 
+    set items = [
+        {
+            subtitle: "Featured",
+            title: "Challenge",
+            description: "Design an icon set with your favorite hobbies",
+            cta: "View Details"
+        },
+        {
+            subtitle: "Blog",
+            title: "Interviews",
+            description: "8 examples of interviews with people  who traveled trough Europe",
+            cta: "Read Post"
+        },
+        {
+            subtitle: "Daily",
+            title: "Practice",
+            description: "Generate daily exercises to improve your skills",
+            cta: "Generate Exercise"
+        }
+    ]
+%}
+
+<section class="c-colored-cards min-h-screen">
+
+    <div class="grid place-center w-full min-h-screen">
+
+        <div class="container mx-auto w-full py-8">
+
+            <div class="flex justify-center flex-wrap flex-md-no-wrap">
+
+                {% for item in items %}
+                    <div class="c-colored-cards__item p-4 p-md-8 flex items-end">
+                        <div class="h-full w-full text-white text-left flex flex-column justify-between pt-md-10">
+                            <div>
+                                <span class="text-medium">{{ item.subtitle }}</span>
+                                <h2 class="description-l text-bold mt-2">{{ item.title }}</h2>
+                                <p class="description-m text-medium mt-4">{{ item.description }}</p>
+                            </div>
+                            <a href="javascript:void(0);" class="btn text-white text-medium mt-4">
+                                {{ item.cta }} <span class="ti-angle-right"></span>
+                            </a>
+                            
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+
+</section>

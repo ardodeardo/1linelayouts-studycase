@@ -1,0 +1,63 @@
+.heading {
+
+    &-m {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 31px;
+
+        @include respond-to('md') {
+            font-size: 22px;
+            line-height: 40px;
+        }
+
+        @include respond-to('xl') {
+            font-size: 26px;
+            letter-spacing: .8px;
+            line-height: 42px;
+        }
+    }
+
+    &-l {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 23px;
+
+        @include respond-to('md') {
+            font-size: 26px;
+            line-height: 44px;
+        }
+    
+        @include respond-to('xl') {
+            font-size: 36px;
+            letter-spacing: .8px;
+            line-height: 52px;
+        }
+    }
+
+    &-xl {
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 39px;
+
+        @include respond-to('md') {
+            font-size: 36px;
+            line-height: 54px;
+        }
+    
+        @include respond-to('xl') {
+            font-size: 48px;
+            letter-spacing: .8px;
+            line-height: 64px;
+        }
+    }
+
+    // &-xxl {
+    //     @include respond-to('xl') {
+    //         font-size: 72px;
+    //         font-weight: 700;
+    //         letter-spacing: .8px;
+    //         line-height: 87px;
+    //     }
+    // }
+}

@@ -1,0 +1,49 @@
+@import "../abstracts/variables";
+
+@mixin general-properties($lists) {
+
+    @each $prefix, $items in $lists {
+
+        @each $item in $items {
+    
+            $midfix: nth($item, 1);
+            $postfix: nth($item, 2);
+            $property: nth($item, 3);
+            $value: nth($item, 4);
+            $is-use-prefix: nth($item, 5);
+    
+            $separator1: '';
+            $separator2: '';
+    
+            @if $is-use-prefix { 
+                $separator1: '-';
+            }
+            @else {
+                $prefix: '';
+            }
+    
+            @if not ($midfix == '') {
+               $separator2: '-';
+            }
+    
+            @each $query in $queries {
+    
+                @if $query == '' {
+    
+                    .#{ $prefix }#{ $separator1 }#{ $midfix }#{ $separator2 }#{ $postfix } {
+                        #{ $property }: #{ $value };
+                    }
+                }
+                @else {
+    
+                    @include respond-to($query) {
+    
+                        .#{ $prefix }#{ $separator1 }#{ $query }-#{ $midfix }#{ $separator2 }#{ $postfix } {
+                            #{ $property }: #{ $value };
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

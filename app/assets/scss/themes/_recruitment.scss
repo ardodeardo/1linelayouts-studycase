@@ -1,0 +1,21 @@
+@import "../abstracts/variables";
+@import "../objects/buttons";
+
+.t-recruitment {
+
+    font-family: 'Lexend', sans-serif;
+
+    .btn {
+        @extend %button;
+
+        background-color: $color-recruitment-blue-purplish;
+        color: var(--color-white);
+        border-radius: 32px;
+        width: 90%;
+
+        @include respond-to('md') {
+            max-width: 350px;
+        }
+    }
+
+}

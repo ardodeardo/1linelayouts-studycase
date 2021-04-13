@@ -1,0 +1,26 @@
+@import "../objects/buttons";
+
+.t-app-cards {
+    font-family: 'Poppins', sans-serif;
+
+    .btn {
+        @extend %button;
+
+        border-radius: 32px;
+        
+        &-transparent {
+            background-color: transparent;
+            color: var(--color-black);
+        }
+
+        &-light {
+            background-color: var(--color-white);
+            color: var(--color-black);
+        }
+
+        &-dark {
+            background-color: var(--color-black);
+            color: var(--color-white);
+        }
+    }
+}

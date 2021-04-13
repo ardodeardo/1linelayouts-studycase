@@ -1,0 +1,23 @@
+@import "../abstracts/variables";
+
+.c-colored-cards {
+    background-color: $color-colored-dark-purple;
+
+    &__item {
+        width: clamp(200px, 28%, 33.33%);
+
+        @include respond-to('xl') {
+            aspect-ratio: 1/1;
+        }
+
+        &:nth-child(1) {
+            background-color: $color-colored-blue-purplish;
+        }
+        &:nth-child(2) {
+            background-color: $color-colored-purple;
+        }
+        &:nth-child(3) {
+            background-color: $color-colored-pink;
+        }
+    }
+}

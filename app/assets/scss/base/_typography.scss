@@ -1,0 +1,28 @@
+body {
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    letter-spacing: 0;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+}
+
+b, strong {
+    font-weight: 700;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+[role=button], button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: inherit;
+}

@@ -1,0 +1,53 @@
+.c-landing {
+
+    min-height: 85vh;
+
+    &__content {
+        z-index: 10;       
+    }
+
+    &__title {
+        span {
+            font-weight: 300;
+        }
+    }
+
+    &__item {
+
+        &-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            justify-content: center;
+        }
+
+        display: grid;
+        place-items: center;
+        transition: background-color .3s, color .3s;
+        border: 1px solid black;
+        text-decoration: none;
+        color: black;
+        padding: 16px;
+        margin-bottom: 32px;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        min-height: 80px;
+
+        @include respond-to('lg') {
+            width: 23%;
+            margin-left: 16px;
+            margin-right: 16px;
+        }
+
+        @include respond-to('xl') {
+            &:hover {
+                background-color: black;
+                color: white;
+            }
+        }   
+    }
+
+
+}
+

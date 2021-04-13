@@ -1,0 +1,11 @@
+@import "../objects/buttons";
+
+.t-base {
+
+    font-family: 'Roboto', sans-serif;
+
+    .btn{
+        @extend %button;
+    }
+    
+}

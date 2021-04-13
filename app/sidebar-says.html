@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block extra_style %}
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+{% endblock extra_style %}
+
+{% block content %}
+
+    <main class="t-mini-uikit">
+
+        {% include "./components/mini-uikit.html" %}
+
+        {%  
+            set copyright = {
+                url: "https://www.uidesigndaily.com/posts/photoshop-invoicing-mini-ui-kit-invoice-bill-receipt-day-517",
+                author: "uidesigndaily.com"
+            } 
+        %}
+        {% include "./components/copyright.html" %}
+    </main>
+
+{% endblock content %}

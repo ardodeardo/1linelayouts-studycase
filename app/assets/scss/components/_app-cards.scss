@@ -1,0 +1,51 @@
+@import "../abstracts/variables";
+
+.c-app-cards {
+
+    background-color: $colors-app-wall-white;
+
+    &__container {
+        width: 70%;
+    }
+
+    &__app-control {
+        display: grid;
+        gap: 32px;
+        
+        @include respond-to('md') {
+            grid-template-columns: repeat(2, minmax(200px, 1fr)); 
+            gap: 0;       
+            
+        }
+    }
+
+    &__grid {
+
+        display: grid;
+        gap: 32px;
+
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));        
+    }
+
+    &__item {
+        aspect-ratio: 1/1;
+        background-color: var(--color-white);
+        border-radius: 8px;
+
+        -webkit-box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.2); 
+        box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.2);
+        
+        &:first-child {
+            background-color: $colors-app-light-gray;
+
+            .c-app-cards__icon {
+                color: $colors-app-shade-gray;
+            }
+        }
+    }
+
+    &__icon {
+        font-size: 32px;
+    }
+
+}

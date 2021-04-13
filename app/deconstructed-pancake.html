@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block extra_style %}
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700&display=swap" rel="stylesheet">
+{% endblock extra_style %}
+
+{% block content %}
+
+    <main class="t-recruitment">
+
+        {% include "./components/recruitment.html" %}
+
+        {% 
+            set copyright = {
+                url: "https://www.uidesigndaily.com/posts/sketch-looking-for-co-founders-section-website-card-list-day-1308",
+                author: "uidesigndaily.com"
+            } 
+        %}
+        {% include "./components/copyright.html" %}
+    </main>
+
+{% endblock content %}

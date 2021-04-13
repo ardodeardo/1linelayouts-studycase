@@ -1,0 +1,18 @@
+.c-header {
+    height: 72px;
+
+    &__image {
+        height: 25px;
+        width: 25px;
+        vertical-align: middle;
+    }
+
+    &__item {
+        a {
+            color: black;
+            text-decoration: none;
+        }
+    }
+
+    border-bottom: 1px solid #e9eaea;
+}

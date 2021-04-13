@@ -1,0 +1,23 @@
+@import "../abstracts/variables";
+
+.c-upload {
+
+    background-color: $color-upload-dark-purple;
+
+
+    &__content {
+        background-color: $color-upload-dark-purple2;
+        border-radius: 16px;
+
+        @include respond-to('xl') {
+            min-width: 710px; 
+            min-height: 420px; 
+        }
+    }
+
+    &__area {
+        background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='16' ry='16' stroke='%23383271FF' stroke-width='5' stroke-dasharray='10%2c 10' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+        border-radius: 16px;
+    }
+
+}

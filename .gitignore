@@ -1,0 +1,11 @@
+.DS_Store
+node_modules/*
+node_modules
+build/*
+build/
+self.config.js
+
+package-lock.json
+yarn.lock
+
+.vscode/

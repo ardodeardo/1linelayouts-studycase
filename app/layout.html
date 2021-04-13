@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>1-Line Layouts Study Case</title>
+
+    <!-- <link href="https://www.gojek.com" rel="preconnect"> -->
+    <!-- <link href="https://www.youtube.com" rel="preconnect"> -->
+
+    <!-- <link rel="stylesheet" href="/assets/css/fonts.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+    <link rel="stylesheet" href="/assets/css/critical.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+
+    {% block extra_style %}{% endblock extra_style %}
+</head>
+
+<body>
+    {% include "./components/base/header.html" %}
+
+    
+    {% block content %}
+    {% endblock content %}
+
+
+    {% include "./components/base/footer.html" %}
+
+    <script src="/assets/js/main.js"></script>
+
+    {% block extra_scripts %}{% endblock extra_scripts %}
+</body>
+
+</html>
