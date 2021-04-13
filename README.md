@@ -28,11 +28,11 @@ app
 	├── ...
 	└── scss
 		├── abstracts		# variable, mixins
-		├── base			# reset, typography
+		├── base		# reset, typography
 		├── components		# sections
-		├── layout			# header, container, footer
-		├── objects			# button, heading, description 
-		├── themes			# design themes
+		├── layout		# header, container, footer
+		├── objects		# button, heading, description 
+		├── themes		# design themes
 		├── utilities		# display, size, text
 		├── critical.scss	# consist all except components
 		└── styles.scss		# consist components only
@@ -46,6 +46,7 @@ SCSS folder architecture is using adaptation and modification of **7-1 Pattern**
 As the title "Study Case" in this project,  here's some of the 1-Line Layouts *hacks* i have implemented:
 
 1.  **Super Centered** - [View]()
+
 	Ever get confused how to make an element horizontal and vertically center?
 	No more hassle, use `place-items: center` !
 
@@ -58,6 +59,7 @@ As the title "Study Case" in this project,  here's some of the 1-Line Layouts *h
 	```
 	> CSS classes will be different in the demo!
 2.  **The Deconstructed Pancake** - [View]()
+
 	Flex and responsive. You want a responsive stack of items? use `flex: 0 1 <baseWidth>`
 	
 	Here's the basic CSS example:
@@ -75,6 +77,7 @@ As the title "Study Case" in this project,  here's some of the 1-Line Layouts *h
 	> CSS classes will be different in the demo!
 
 3.  **Sidebar Says** - [View]()
+
 	No need to hassle about filling up the rest space of the block/element again. use `grid-template-columns: minmax(<min>, <max>) ...`
 	
 	Here's the basic CSS example:
@@ -87,7 +90,8 @@ As the title "Study Case" in this project,  here's some of the 1-Line Layouts *h
 	> CSS classes will be different in the demo!
 	
 4.  **RAM (Repeat, Auto, Minmax)** - [View]()
-		Ever get tired removing the first and the last margin of items in a row? Wanna try the alternative of flex and flex-wrap ? use `grid-template-columns: repeat(auto-fit, minmax(<base>, 1fr))` !
+
+	Ever get tired removing the first and the last margin of items in a row? Wanna try the alternative of flex and flex-wrap ? use `grid-template-columns: repeat(auto-fit, minmax(<base>, 1fr))` !
 
 	Here's the basic CSS example:
 	```css
@@ -100,6 +104,7 @@ As the title "Study Case" in this project,  here's some of the 1-Line Layouts *h
 	> CSS classes will be different in the demo!
 	
 5.  **Clamping My Style** - [View]()
+
 	Need more control between various values due to the responsiveness? try `clamp(<min>, <actual>, <max>)`
 	
 		Here's the basic CSS example:
