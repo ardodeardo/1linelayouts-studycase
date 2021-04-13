@@ -3,7 +3,7 @@
   <p align="center">
     1-Line Layouts study case implementation based on <a href="https://1linelayouts.glitch.me/">1-Line Layouts</a>
     <br />
-    <a href="">View Demo</a>
+    <a href="https://1linelayouts-studycase.netlify.app/">View Demo</a>
   </p>
 </div>
 
@@ -45,7 +45,7 @@ SCSS folder architecture is using adaptation and modification of **7-1 Pattern**
 
 As the title "Study Case" in this project,  here's some of the 1-Line Layouts *hacks* i have implemented:
 
-1.  **Super Centered** - [View]()
+1.  **Super Centered** - [View](https://1linelayouts-studycase.netlify.app/super-centered.html)
 
 	Ever get confused how to make an element horizontal and vertically center?
 	No more hassle, use `place-items: center` !
@@ -58,7 +58,7 @@ As the title "Study Case" in this project,  here's some of the 1-Line Layouts *h
 	}
 	```
 	> CSS classes will be different in the demo!
-2.  **The Deconstructed Pancake** - [View]()
+2.  **The Deconstructed Pancake** - [View](https://1linelayouts-studycase.netlify.app/deconstructed-pancake.html)
 
 	Flex and responsive. You want a responsive stack of items? use `flex: 0 1 <baseWidth>`
 	
@@ -76,7 +76,7 @@ As the title "Study Case" in this project,  here's some of the 1-Line Layouts *h
 	```
 	> CSS classes will be different in the demo!
 
-3.  **Sidebar Says** - [View]()
+3.  **Sidebar Says** - [View](https://1linelayouts-studycase.netlify.app/sidebar-says.html)
 
 	No need to hassle about filling up the rest space of the block/element again. use `grid-template-columns: minmax(<min>, <max>) ...`
 	
@@ -89,7 +89,7 @@ As the title "Study Case" in this project,  here's some of the 1-Line Layouts *h
 	```
 	> CSS classes will be different in the demo!
 	
-4.  **RAM (Repeat, Auto, Minmax)** - [View]()
+4.  **RAM (Repeat, Auto, Minmax)** - [View](https://1linelayouts-studycase.netlify.app/ram.html)
 
 	Ever get tired removing the first and the last margin of items in a row? Wanna try the alternative of flex and flex-wrap ? use `grid-template-columns: repeat(auto-fit, minmax(<base>, 1fr))` !
 
@@ -103,7 +103,7 @@ As the title "Study Case" in this project,  here's some of the 1-Line Layouts *h
 	```
 	> CSS classes will be different in the demo!
 	
-5.  **Clamping My Style** - [View]()
+5.  **Clamping My Style** - [View](https://1linelayouts-studycase.netlify.app/clamping-my-style.html)
 
 	Need more control between various values due to the responsiveness? try `clamp(<min>, <actual>, <max>)`
 	
